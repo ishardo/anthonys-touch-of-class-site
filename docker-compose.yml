@@ -3,5 +3,14 @@ services:
     build: .
     container_name: anthonys-touch-of-class
     restart: unless-stopped
-    ports:
-      - "8090:80"
+    # Isolated: accessible only via the sidecar tunnel
+    expose:
+      - "80"
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: anthonys-site-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=eyJhIjoiY2UwODIwZmQ4NzQyNzUyYTM3Yjg0MDUxZTA3MTZhOTkiLCJ0IjoiZWU4MDNiNzYtNmE0Yy00NjUwLTgzMjUtYWIyZmE3YjA4ODExIiwicyI6Ik1USTRaR0UzWm1NdFl6Qm1aQzAwTXpVekxUbGtaR010WWpWaU1XWTJORGRsWWpJeiJ9
