@@ -1,0 +1,19 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    # This is a template. If the user wants to push to GitHub Container Registry, 
+    # they would add login and push steps here.
+    - name: Build local image
+      run: docker build . --file Dockerfile --tag anthonys-touch-of-class:latest
