@@ -1,0 +1,7 @@
+services:
+  anthonys-website:
+    build: .
+    container_name: anthonys-touch-of-class
+    restart: unless-stopped
+    ports:
+      - "8090:80"
