@@ -66,18 +66,15 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.7",
-            "reviewCount": "220",
-            "bestRating": "5"
+            "reviewCount": "220"
         },
-        "areaServed": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 26.9755,
-                "longitude": -82.0825
-            },
-            "geoRadius": "50000"
-        },
+        "areaServed": [
+            { "@type": "City", "name": "Port Charlotte" },
+            { "@type": "City", "name": "Punta Gorda" },
+            { "@type": "City", "name": "North Port" },
+            { "@type": "City", "name": "Sarasota" },
+            { "@type": "City", "name": "Bradenton" }
+        ],
         "priceRange": "$$",
         "paymentAccepted": "Cash, Credit Card, Insurance",
         "hasOfferCatalog": {
@@ -124,6 +121,9 @@
     <!-- Hero Section (Home) -->
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
+        <img src="hero-bg.png"
+            alt="Anthony's Touch of Class Collision Center - Premier Auto Body Shop serving Port Charlotte, Punta Gorda, North Port, Sarasota, and Bradenton"
+            style="display:none;">
         <div class="hero-content">
             <h1>Anthony's Touch of Class<br><span class="hero-subtitle">Collision Center</span></h1>
             <p class="hero-tagline">Southwest Florida's Premier Auto Body &amp; Collision Repair</p>
@@ -144,13 +144,19 @@
                         drivers across the region trust.
                     </p>
                     <p>
-                        From minor dents and scratches to major collision damage, we handle every job with the
-                        same attention to detail and commitment to excellence. We work with all insurance companies
-                        to make your repair experience as smooth as possible.
+                        Since opening our doors, <strong>Anthony's Touch of Class Collision Center</strong> has been the
+                        trusted name for
+                        premium auto body repair and restoration. Located in the heart of Port Charlotte, we take pride
+                        in serving
+                        the entire Gulf Coast community, from <strong>Sarasota and Bradenton</strong> down through
+                        <strong>North Port and Punta Gorda</strong>.
                     </p>
                     <p>
-                        Our state-of-the-art facility and skilled technicians ensure that every vehicle leaving
-                        our shop meets the highest standards of quality and craftsmanship.
+                        We combine old-school craftsmanship with modern technology to ensure every vehicle that leaves
+                        our shop
+                        returns to its pre-accident condition. Whether it's a minor dent or major structural repair, our
+                        team
+                        is dedicated to providing the "Touch of Class" your vehicle deserves.
                     </p>
                 </div>
                 <div class="about-highlights">
@@ -210,6 +216,23 @@
                             target="_blank" rel="noopener noreferrer" class="review-link">Read Reviews on Google →</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section (SEO) -->
+    <section class="section service-areas">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Serving Southwest Florida</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted);">We are proud to provide expert auto body shop and
+                collision repair services to the following communities:</p>
+            <div
+                style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 3rem; font-weight: 500; color: var(--navy);">
+                <span>📍 Port Charlotte</span>
+                <span>📍 Punta Gorda</span>
+                <span>📍 North Port</span>
+                <span>📍 Sarasota</span>
+                <span>📍 Bradenton</span>
             </div>
         </div>
     </section>
