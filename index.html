@@ -10,6 +10,11 @@
         gtag('js', new Date());
 
         gtag('config', 'G-CPP731RZPX');
+
+        // Ensure canonical URL
+        if (window.location.pathname === '/index.html') {
+            window.location.replace('/');
+        }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
